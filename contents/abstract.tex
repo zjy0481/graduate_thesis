@@ -9,10 +9,12 @@
 }
 \addcontentsline{toc}{chapter}{摘\ 要}
 
-三维点云数据可精准表达物体空间几何结构，在自动驾驶、机器人环境感知、增强现实等领域得到广泛应用。受采集设备性能、物体遮挡、视点受限等因素影响，实际获取的点云往往存在稀疏残缺问题，严重制约后续三维处理任务的精度与鲁棒性。传统点云补全方法在复杂结构与大面积缺失场景下效果有限，早期深度学习方法易出现局部细节丢失问题，已有的基于Transformer架构的方法虽然可以在补全任务中兼顾点云全局结构与局部细节，但难以保证补全后点云全局密度的均衡分布。本文针对以上问题，开展基于Transformer的点云补全与三维重建算法研究，基于Coarse-to-fine渐进式生成策略，引入自适应查询生成机制与基于损失函数的密度感知强化，提高了模型的点云补全性能与密度感知能力。实验基于ShapeNet等公开数据集开展，结果表明本算法在补全精度上优于主流基准方法，可为三维视觉相关应用提供有效的算法支撑。
+三维点云数据可精准刻画物体空间几何结构，已广泛应用于自动驾驶、机器人环境感知和增强现实等领域。然而，受采集设备性能、物体遮挡及视点受限等因素影响，实际获取的点云往往存在稀疏与残缺问题，严重制约后续三维处理任务的精度与鲁棒性。针对这一问题，点云补全技术通过学习三维形状的先验知识来填补这些缺失区域，旨在从存在遮挡、稀疏或缺失的不完整点云数据中恢复出物体完整的几何结构，其性能直接决定了三维重建、自动驾驶感知、自主导航等下游应用的可靠性与精度。传统点云补全方法在复杂结构与大面积缺失场景下效果有限，早期深度学习方法则易出现局部细节丢失问题；基于Transformer架构的方法虽然可以兼顾点云全局结构与局部细节，却难以保证补全后点云全局密度的均衡分布。
+
+针对上述问题，本文提出一种基于Transformer的点云补全与三维重建算法。该算法采用从粗到细（Coarse-to-fine）的渐进式生成策略，引入自适应查询生成机制，并利用损失函数进行密度感知强化，有效提高了模型的补全性能与密度感知能力。在ShapeNet等公开数据集上的实验结果表明，本算法在补全精度上优于主流基准方法，可为三维视觉相关应用提供有效的算法支撑。
 
 \vspace{8mm}
-\textbf{关键词}: 点云补全, Transformer, 三维重建
+\textbf{关键词}: 点云补全, Transformer, 密度感知, 三维重建
 
 \newpage
 {
@@ -22,8 +24,10 @@
 }
 \addcontentsline{toc}{chapter}{ABSTRACT}
 
-Three-dimensional point cloud data can accurately represent the spatial geometric structure of objects, and has been widely applied in autonomous driving, robotic environmental perception, augmented reality, and other fields. Due to factors such as the performance limitations of acquisition equipment, object occlusion, and restricted viewpoints, the acquired point clouds often suffer from sparsity and incompleteness, which severely constrains the accuracy and robustness of subsequent 3D processing tasks. Traditional point cloud completion methods exhibit limited effectiveness in scenarios with complex structures and large-area missing regions. Early deep learning-based approaches are prone to losing local details. Although existing Transformer-based methods can balance global structure and local details in completion tasks, they struggle to ensure the uniform distribution of global point density in the completed point clouds. To address these issues, this paper conducts research on Transformer-based point cloud completion and 3D reconstruction algorithms. Based on a Coarse-to-Fine progressive generation strategy, an adaptive query generation mechanism and density-aware reinforcement through loss function design are introduced, which improve the model's point cloud completion performance and density-aware capability. Experiments are conducted on public datasets such as ShapeNet. The results demonstrate that the proposed algorithm outperforms mainstream baseline methods in completion accuracy, providing effective algorithmic support for 3D vision-related applications.
+Three-dimensional point cloud data can accurately characterize the spatial geometric structure of objects and has been widely applied in autonomous driving, robotic environmental perception , and augmented reality. However, due to factors such as the performance limitations of acquisition equipment, object occlusion, or restricted viewpoints, the acquired point clouds often suffer from sparsity and incompleteness, which severely constrains the accuracy and robustness of subsequent 3D processing tasks. To address this issue, point cloud completion techniques learn prior knowledge of 3D shapes to fill in the missing regions, aiming to recover the complete geometric structure of objects from incomplete point cloud data with occlusions, sparsity, or missing parts. The performance of point cloud completion directly determines the reliability and accuracy of downstream applications such as 3D reconstruction, autonomous driving perception, and autonomous navigation. Traditional point cloud completion methods exhibit limited effectiveness in scenarios with complex structures and large-area missing regions, while early deep learning-based approaches are prone to losing local details. Although Transformer-based methods can balance global structure and local details, they struggle to ensure the uniform distribution of global point density in the completed point clouds.
+
+To address the aforementioned issues, this paper proposes a Transformer-based point cloud completion and 3D reconstruction algorithm. The algorithm adopts a Coarse-to-Fine progressive generation strategy, introduces an adaptive query generation mechanism, and employs loss function-based density-aware reinforcement, effectively improving the model's completion performance and density-aware capability. Experimental results on public datasets such as ShapeNet demonstrate that the proposed algorithm outperforms mainstream baseline methods in completion accuracy, providing effective algorithmic support for 3D vision-related applications.
 
 \vspace{8mm}
 
-\textbf{Keywords}: Point Cloud Completion, Transformer, 3D Reconstruction
+\textbf{Keywords}: Point Cloud Completion, Transformer, Density-Aware, 3D Reconstruction
