@@ -1,0 +1,182 @@
+\begin{thebibliography}{29}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[翟卫欣\ 等(2023)翟卫欣, 冯全, 曹义亲, and 张水发]{zhai2023improved}
+翟卫欣, 冯全, 曹义亲, 等.
+\newblock 基于改进PoinTr的苹果点云补全方法研究\allowbreak[J].
+\newblock 农业机械学报, 2023, 54\allowbreak (6): 234-242.
+
+\bibitem[Yu et~al.(2021)Yu, Rao, Wang, Liu, and Lu]{yu2021pointr}
+YU X, RAO Y, WANG Z, et~al.
+\newblock PoinTr: diverse point cloud completion with geometry-aware transformers\allowbreak[C]//\allowbreak
+Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV).
+\newblock Montreal, Canada: IEEE, 2021: 12498-12507.
+
+\bibitem[Yan et~al.(2022)Yan, Lin, Pankanti, and Guo]{yan2022shapeformer}
+YAN X, LIN L, PANKANTI S, et~al.
+\newblock ShapeFormer: transformer-based shape completion via sparse representation\allowbreak[C]//\allowbreak
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR).
+\newblock New Orleans, LA, USA: IEEE, 2022: 10987-10996.
+
+\bibitem[Qi et~al.(2017)Qi, Su, Mo, and Guibas]{qi2017pointnet}
+QI C~R, SU H, MO K, et~al.
+\newblock PointNet: deep learning on point sets for 3D classification and segmentation\allowbreak[C]//\allowbreak
+Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR).
+\newblock Honolulu, HI, USA: IEEE, 2017: 652-660.
+
+\bibitem[Qi et~al.(2017)Qi, Yi, Su, and Guibas]{qi2017pointnetplusplus}
+QI C~R, YI L, SU H, et~al.
+\newblock PointNet++: deep hierarchical feature learning on point sets in a metric space\allowbreak[J].
+\newblock Advances in Neural Information Processing Systems (NeurIPS), 2017, 30: 1089-1099.
+
+\bibitem[Fan et~al.(2017)Fan, Su, and Guibas]{fan2017pcn}
+FAN H, SU H, GUIBAS L~J.
+\newblock A point set generation network for 3D object reconstruction from a single image\allowbreak[C]//\allowbreak
+Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR).
+\newblock Honolulu, HI, USA: IEEE, 2017: 605-613.
+
+\bibitem[Chen et~al.(2024)Chen, Tan, Liu, Zou, and Li]{chen2024geoformer}
+CHEN S, TAN H, LIU K, et~al.
+\newblock GeoFormer: geometric transformer for point cloud completion\allowbreak[C]//\allowbreak
+Proceedings of the 32nd ACM International Conference on Multimedia (MM).
+\newblock Melbourne, Australia: ACM, 2024: 8952-8961.
+
+\bibitem[Yu et~al.(2023)Yu, Rao, Wang, Liu, and Lu]{yu2023adapointr}
+YU X, RAO Y, WANG Z, et~al.
+\newblock AdaPoinTr: diverse point cloud completion with adaptive geometry-aware transformers\allowbreak[J].
+\newblock IEEE Transactions on Pattern Analysis and Machine Intelligence, 2023, 45\allowbreak (12): 14114-14130.
+
+\bibitem[Xiang et~al.(2021)Xiang, Wen, Liu, Cao, Li, and Zhang]{xiang2021snowflakenet}
+XIANG P, WEN X, LIU Y~S, et~al.
+\newblock SnowflakeNet: point cloud completion by snowflake point deconvolution with skip-transformer\allowbreak[C]//\allowbreak
+Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV).
+\newblock Montreal, Canada: IEEE, 2021: 14952-14962.
+
+\bibitem[Chen et~al.(2023)Chen, Long, Qiu, Li, and Lu]{chen2023anchorformer}
+CHEN Z, LONG F, QIU Z, et~al.
+\newblock AnchorFormer: point cloud completion from discriminative nodes\allowbreak[C]//\allowbreak
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR).
+\newblock Vancouver, Canada: IEEE, 2023: 13581-13590.
+
+\bibitem[Lin et~al.(2023)Lin, Yan, Li, Wang, and Yang]{lin2023pctmanet}
+LIN Y, YAN Y, LI K, et~al.
+\newblock PCTMA-net: point cloud completion with transformer and multiscale attention\allowbreak[J].
+\newblock IEEE Transactions on Instrumentation and Measurement, 2023, 72: 1-13.
+
+\bibitem[Yang et~al.(2022)Yang, Zhang, Zhang, and Li]{yang2022dmfnet}
+YANG J, ZHANG Q, ZHANG Y, et~al.
+\newblock DMF-net: a deep multi-scale fusion network for point cloud completion\allowbreak[J].
+\newblock IEEE Transactions on Geoscience and Remote Sensing, 2022, 60: 1-14.
+
+\bibitem[张文彬\ 等(2023)张文彬, 汪云飞, 鲁亦斌, and 毕笃彦]{zhang2023crossmodal}
+张文彬, 汪云飞, 鲁亦斌, 等.
+\newblock 融合图像信息的跨模态Transformer点云补全算法\allowbreak[J].
+\newblock 计算机辅助设计与图形学学报, 2023, 35\allowbreak (8): 1215-1224.
+
+\bibitem[Zhang et~al.(2022)Zhang, Feng, Li, Liu, and Wang]{zhang2022multimodal}
+ZHANG X, FENG Y, LI S, et~al.
+\newblock Multi-modal point cloud completion with transformer\allowbreak[C]//\allowbreak
+2022 IEEE International Conference on Multimedia and Expo (ICME).
+\newblock Taipei, China: IEEE, 2022: 1-6.
+
+\bibitem[Yi et~al.(2022)Yi, Wang, Liu, Wang, and Li]{yi2022crapcn}
+YI Y, WANG W, LIU X, et~al.
+\newblock CRA-PCN: point cloud completion with cascaded refinement attention\allowbreak[C]//\allowbreak
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR).
+\newblock New Orleans, LA, USA: IEEE, 2022: 14133-14142.
+
+\bibitem[Lu et~al.(2025)Lu, Pi, Qin, Li, and Wang]{lu2025selfsupervised}
+LU J, PI H, QIN Y, et~al.
+\newblock Self-supervised point cloud completion based on multi-view augmentations of single partial point cloud\allowbreak[EB/OL].
+\newblock 2025.
+\newblock \url{https://arxiv.org/abs/2509.22132}.
+
+\bibitem[Yan et~al.(2025)Yan, Li, Luo, Wang, and Li]{yan2025symmcompletion}
+YAN H, LI Z, LUO K, et~al.
+\newblock SymmCompletion: high-fidelity and high-consistency point cloud completion with symmetry guidance\allowbreak[C]//\allowbreak
+Proceedings of the AAAI Conference on Artificial Intelligence: Vol.~39.
+\newblock Philadelphia, PA, USA: AAAI Press, 2025: 9094-9102.
+
+\bibitem[Dosovitskiy et~al.(2021)Dosovitskiy, Beyer, Kolesnikov, Weissenborn, Zhai, Unterthiner, Dehghani, Minderer, Heigold, Gelly, Uszkoreit, and Houlsby]{dosovitskiy2021vit}
+DOSOVITSKIY A, BEYER L, KOLESNIKOV A, et~al.
+\newblock An image is worth 16x16 words: transformers for image recognition at scale\allowbreak[C]//\allowbreak
+Proceedings of the International Conference on Learning Representations (ICLR).
+\newblock 2021.
+
+\bibitem[Yu et~al.(2018)Yu, Li, Fu, Cohen-Or, and Heng]{yu2018punet}
+YU L, LI X, FU C~W, et~al.
+\newblock PU-net: point cloud upsampling network\allowbreak[C]//\allowbreak
+Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR).
+\newblock Salt Lake City, UT, USA: IEEE, 2018: 2790-2799.
+
+\bibitem[Wu et~al.(2021)Wu, Pan, Zhang, Wang, Liu, and Lin]{wu2021densityaware}
+WU T, PAN L, ZHANG J, et~al.
+\newblock Density-aware chamfer distance as a comprehensive metric for point cloud completion\allowbreak[C]//\allowbreak
+Advances in Neural Information Processing Systems (NeurIPS): Vol.~34.
+\newblock 2021: 29479-29491.
+
+\bibitem[Kazhdan et~al.(2006)Kazhdan, Bolitho, and Hoppe]{kazhdan2006poisson}
+KAZHDAN M, BOLITHO M, HOPPE H.
+\newblock Poisson surface reconstruction\allowbreak[C]//\allowbreak
+Proceedings of the Fourth Eurographics Symposium on Geometry Processing.
+\newblock Cagliari, Sardinia, Italy: Eurographics Association, 2006: 61-70.
+
+\bibitem[Zhou et~al.(2018)Zhou, Park, and Koltun]{zhou2018open3d}
+ZHOU Q~Y, PARK J, KOLTUN V.
+\newblock Open3D: a modern library for 3D data processing\allowbreak[A/OL].
+\newblock arXiv (2018).
+\newblock \url{https://arxiv.org/abs/1801.09847}.
+
+\bibitem[Taubin(1995)]{taubin1995signal}
+TAUBIN G.
+\newblock A signal processing approach to fair surface design\allowbreak[C]//\allowbreak
+Proceedings of the 22nd Annual Conference on Computer Graphics and Interactive Techniques (SIGGRAPH).
+\newblock Los Angeles, CA, USA: ACM, 1995: 351-358.
+
+\bibitem[Yuan et~al.(2018)Yuan, Khot, Held, Mertz, and Hebert]{yuan2018pcn}
+YUAN W, KHOT T, HELD D, et~al.
+\newblock PCN: point completion network\allowbreak[C]//\allowbreak
+Proceedings of International Conference on 3D Vision (3DV).
+\newblock Verona, Italy: IEEE, 2018: 728-737.
+
+\bibitem[Tchapmi et~al.(2019)Tchapmi, Kaichun, Armen, and Leonidas]{tchapmi2019topnet}
+TCHAPMI L~P, KAICHUN M, ARMEN T, et~al.
+\newblock TopNet: topology preserving point cloud completion network\allowbreak[C]//\allowbreak
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR).
+\newblock Long Beach, CA, USA: IEEE, 2019: 10863-10872.
+
+\bibitem[Xie et~al.(2020)Xie, Yao, Zhou, Mao, Zhang, and Sun]{xie2020grnet}
+XIE H, YAO H, ZHOU S, et~al.
+\newblock GRNet: gridding residual network for dense point cloud completion\allowbreak[C]//\allowbreak
+Proceedings of the European Conference on Computer Vision (ECCV).
+\newblock Glasgow, UK: Springer, 2020: 365-381.
+
+\bibitem[Li et~al.(2023)Li, Gao, Tan, and Wei]{li2023proxyformer}
+LI S, GAO P, TAN X, et~al.
+\newblock ProxyFormer: proxy alignment assisted point cloud completion with missing part sensitive transformer\allowbreak[C]//\allowbreak
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR).
+\newblock Vancouver, Canada: IEEE, 2023: 9466-9475.
+
+\bibitem[Zhou et~al.(2022)Zhou, Cao, Chu, Zhu, Lu, Tai, and Wang]{zhou2022seedformer}
+ZHOU H, CAO Y~P, CHU W, et~al.
+\newblock SeedFormer: patch seeds based point cloud completion with upsample transformer\allowbreak[C]//\allowbreak
+Proceedings of the European Conference on Computer Vision (ECCV).
+\newblock Tel Aviv, Israel: Springer, 2022: 416-432.
+
+\bibitem[Li et~al.(2026)Li, Tian, Yu, and Ning]{li2026ppcmt}
+LI J, TIAN S, YU L, et~al.
+\newblock PPC-MT: parallel point cloud completion with mamba-transformer hybrid architecture\allowbreak[A/OL].
+\newblock arXiv (2026).
+\newblock \url{https://arxiv.org/abs/2603.00870}.
+
+\end{thebibliography}
