@@ -1,4 +1,4 @@
-\begin{thebibliography}{29}
+\begin{thebibliography}{32}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \expandafter\ifx\csname urlstyle\endcsname\relax\else
@@ -27,6 +27,25 @@ YAN X, LIN L, PANKANTI S, et~al.
 \newblock ShapeFormer: transformer-based shape completion via sparse representation\allowbreak[C]//\allowbreak
 Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR).
 \newblock New Orleans, LA, USA: IEEE, 2022: 10987-10996.
+
+\bibitem[Alexa et~al.(2001)Alexa, Behr, Cohen-Or, Fleishman, Levin, and Silva]{alexa2001point}
+ALEXA M, BEHR J, COHEN-OR D, et~al.
+\newblock Point set surfaces\allowbreak[C/OL]//\allowbreak
+Proceedings Visualization, 2001. VIS'01.
+\newblock IEEE, 2001: 21-28.
+\newblock DOI: \doi{10.1109/VISUAL.2001.964489}.
+
+\bibitem[Pauly et~al.(2005)Pauly, Mitra, Giesen, Gross, and Guibas]{pauly2005example}
+PAULY M, MITRA N~J, GIESEN J, et~al.
+\newblock Example-based 3D scan completion\allowbreak[C]//\allowbreak
+Symposium on Geometry Processing: Vol.~4.
+\newblock Citeseer, 2005.
+
+\bibitem[Kazhdan et~al.(2013)Kazhdan and Hoppe]{kazhdan2013screened}
+KAZHDAN M, HOPPE H.
+\newblock Screened poisson surface reconstruction\allowbreak[J/OL].
+\newblock ACM Transactions on Graphics (TOG), 2013, 32\allowbreak (3): 1-13.
+\newblock DOI: \doi{10.1145/2487228.2487237}.
 
 \bibitem[Qi et~al.(2017)Qi, Su, Mo, and Guibas]{qi2017pointnet}
 QI C~R, SU H, MO K, et~al.
