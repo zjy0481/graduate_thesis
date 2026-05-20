@@ -20,7 +20,7 @@
 \FloatBarrier
 \begin{figure}[htbp]
 \centering
-\resizebox{0.85\textwidth}{!}{%
+\resizebox{1.0\textwidth}{!}{%
 \begin{tikzpicture}[
     >=stealth,
     node distance=2.5cm,
@@ -31,7 +31,7 @@
         minimum width=3.5cm,
         minimum height=1.2cm,
         rounded corners=2pt,
-        font=\small,
+        font=\fontsize{10.5pt}{12.6pt}\selectfont,
         align=center
     },
     process/.style={
@@ -41,7 +41,7 @@
         minimum width=3.5cm,
         minimum height=1.2cm,
         rounded corners=2pt,
-        font=\small,
+        font=\fontsize{10.5pt}{12.6pt}\selectfont,
         align=center
     },
     output/.style={
@@ -51,7 +51,7 @@
         minimum width=3.5cm,
         minimum height=1.2cm,
         rounded corners=2pt,
-        font=\small,
+        font=\fontsize{10.5pt}{12.6pt}\selectfont,
         align=center
     },
     arrow/.style={
@@ -65,29 +65,29 @@
 \node[block] (input) {输入点云 $\mathbf{P}_{partial}$\\$(N_{in}=2048, 3)$};
 
 % 编码器部分
-\node[block, below=1.2cm of input] (fps) {最远点采样 FPS};
+\node[block, below=0.96cm of input] (fps) {最远点采样 FPS};
 
-\node[block, below=1.2cm of fps] (knn) {K近邻分组};
+\node[block, below=0.96cm of fps] (knn) {K近邻分组};
 
-\node[block, below=1.2cm of knn] (patch) {Patch特征编码};
+\node[block, below=0.96cm of knn] (patch) {Patch特征编码};
 
-\node[block, below=1.2cm of patch] (pos) {三维位置编码};
+\node[block, below=0.96cm of patch] (pos) {三维位置编码};
 
-\node[process, below=1.2cm of pos] (encoder) {几何感知Transformer编码器\\$(6 \text{ 层}, \text{多头注意力 } h=6)$};
+\node[process, below=0.96cm of pos] (encoder) {几何感知Transformer编码器\\$(6 \text{ 层}, \text{多头注意力 } h=6)$};
 
 % 全局特征
-\node[process, below=1.2cm of encoder] (maxpool) {最大池化 Max Pooling\\全局特征 $\mathbf{F}_{global} \in \mathbb{R}^{d}$};
+\node[process, below=0.96cm of encoder] (maxpool) {最大池化 Max Pooling\\全局特征 $\mathbf{F}_{global} \in \mathbb{R}^{d}$};
 
 % 粗粒度生成
-\node[output, below=1.5cm of maxpool] (coarse) {粗粒度点云生成\\$(N_{coarse}=512, 3)$};
+\node[output, below=1.2cm of maxpool] (coarse) {粗粒度点云生成\\$(N_{coarse}=512, 3)$};
 
 % 自适应查询生成
-\node[process, below=1.2cm of coarse, fill=purple!10] (query) {自适应查询生成\\查询排序 + 去噪任务};
+\node[process, below=0.96cm of coarse, fill=purple!10] (query) {自适应查询生成\\查询排序 + 去噪任务};
 
 % 细粒度生成
-\node[output, below=1.2cm of query] (decoder) {Transformer解码器\\$(8 \text{ 层自注意力+交叉注意力})$};
+\node[output, below=0.96cm of query] (decoder) {Transformer解码器\\$(8 \text{ 层自注意力+交叉注意力})$};
 
-\node[output, below=1.2cm of decoder] (fine) {细粒度点云输出\\$(N_{fine}=8192, 3)$};
+\node[output, below=0.96cm of decoder] (fine) {细粒度点云输出\\$(N_{fine}=8192, 3)$};
 
 % 损失函数
 \node[block, right=2.5cm of coarse, fill=red!10] (loss_coarse) {粗粒度损失\\$\mathcal{L}_{coarse} = \lambda_1 \mathcal{L}_{EMD} + \lambda_2 \mathcal{L}_{CD}$};
@@ -114,13 +114,13 @@
 \draw[arrow, dashed] (fine) -- (loss_fine);
 
 % 标注
-\node[above=0.3cm of input, font=\small\bfseries] {输入};
-\node[left=0.5cm of encoder, font=\small\bfseries, text=blue!70!black] {编码器};
-\node[left=0.5cm of query, font=\small\bfseries, text=purple!70!black] {查询优化};
-\node[left=0.5cm of coarse, font=\small\bfseries, text=orange!70!black] {解码器};
-\node[right=0.3cm of loss_coarse, font=\small, text=red!70!black] {训练阶段};
-\node[right=0.3cm of loss_denoise, font=\small, text=red!70!black] {训练阶段};
-\node[right=0.3cm of loss_fine, font=\small, text=red!70!black] {训练阶段};
+\node[above=0.3cm of input, font=\fontsize{10.5pt}{12.6pt}\selectfont\bfseries] {输入};
+\node[left=0.5cm of encoder, font=\fontsize{10.5pt}{12.6pt}\selectfont\bfseries, text=blue!70!black] {编码器};
+\node[left=0.5cm of query, font=\fontsize{10.5pt}{12.6pt}\selectfont\bfseries, text=purple!70!black] {查询优化};
+\node[left=0.5cm of coarse, font=\fontsize{10.5pt}{12.6pt}\selectfont\bfseries, text=orange!70!black] {解码器};
+\node[right=0.3cm of loss_coarse, font=\fontsize{10.5pt}{12.6pt}\selectfont, text=red!70!black] {训练阶段};
+\node[right=0.3cm of loss_denoise, font=\fontsize{10.5pt}{12.6pt}\selectfont, text=red!70!black] {训练阶段};
+\node[right=0.3cm of loss_fine, font=\fontsize{10.5pt}{12.6pt}\selectfont, text=red!70!black] {训练阶段};
 
 \end{tikzpicture}%
 }
@@ -141,7 +141,7 @@
 \FloatBarrier
 \begin{figure}[htbp]
     \centering
-    \resizebox{0.9\textwidth}{!}{%
+    \resizebox{1.0\textwidth}{!}{%
     \begin{tikzpicture}[
         node distance=0.8cm,
         box/.style={
@@ -153,7 +153,7 @@
             minimum height=0.9cm,
             align=center,
             fill=#1,
-            font=\small
+            font=\fontsize{10.5pt}{12.6pt}\selectfont
         },
         box/.default=blue!10,
         arrow/.style={
@@ -182,15 +182,15 @@
     \draw[arrow] (smooth) -- (output);
     
     % 左侧标注
-    \node[left=0.3cm of input, text width=1.8cm, align=center, font=\small] (label1) {数据\\预处理};
+    \node[left=0.3cm of input, text width=1.8cm, align=center, font=\fontsize{10.5pt}{12.6pt}\selectfont] (label1) {数据\\预处理};
     \draw[dashed, gray] (label1.north east) -- (input.north west);
     \draw[dashed, gray] (label1.south east) -- (input.south west);
     
-    \node[left=0.3cm of poisson, text width=1.8cm, align=center, font=\small] (label2) {核心\\重建};
+    \node[left=0.3cm of poisson, text width=1.8cm, align=center, font=\fontsize{10.5pt}{12.6pt}\selectfont] (label2) {核心\\重建};
     \draw[dashed, gray] (label2.north east) -- (poisson.north west);
     \draw[dashed, gray] (label2.south east) -- (poisson.south west);
     
-    \node[left=0.3cm of density, text width=1.8cm, align=center, font=\small] (label3) {后处理\\优化};
+    \node[left=0.3cm of density, text width=1.8cm, align=center, font=\fontsize{10.5pt}{12.6pt}\selectfont] (label3) {后处理\\优化};
     \draw[dashed, gray] (label3.north east) -- (density.north west);
     \draw[dashed, gray] (label3.south east) -- (density.south west);
     \end{tikzpicture}%

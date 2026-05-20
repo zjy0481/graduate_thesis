@@ -105,37 +105,48 @@ PCD-MT\cite{li2026ppcmt} & 0.40 & 0.53 & 0.99 & 0.64 & 48.9 \\
 \end{figure}
 \FloatBarrier
 
-图\ref{fig:airplane_compare}、\ref{fig:airplane_compare2}、\ref{fig:airplane_compare3}从同一视角展示了飞机样本由本算法与baseline方法的补全前后对比。左侧为输入的残缺点云（红色点云，2048个点），中间为PoinTr基线方法的补全结果（绿色点云，8192个点），右侧为本算法优化后的补全结果（蓝色点云，8192个点）。
+图\ref{fig:airplane_compare}展示了飞机样本由本算法与baseline方法的补全前后对比。每行中，左侧为输入的残缺点云（红色点云，2048个点），中间为PoinTr基线方法的补全结果（绿色点云，8192个点），右侧为本算法优化后的补全结果（蓝色点云，8192个点），三个点云姿态完全相同。
 \FloatBarrier
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{figures/pointcloud/airplane/compare-1.png}
-\caption{飞机补全效果对比（视角一）}
+% 视角一
+\begin{minipage}{\textwidth}
+\centering
+\includegraphics[width=\textwidth]{figures/pointcloud/airplane/compare-1.png}\\
+\vspace{0.2em}
+(a) 视角一（正视图）
+\end{minipage}
+
+\vspace{1.5em} % 增加此处垂直间距
+
+% 视角二
+\begin{minipage}{\textwidth}
+\centering
+\includegraphics[width=\textwidth]{figures/pointcloud/airplane/compare-2.png}\\
+\vspace{0.2em}
+(b) 视角二（底部仰视）
+\end{minipage}
+
+\vspace{1.5em}
+
+% 视角三
+\begin{minipage}{\textwidth}
+\centering
+\includegraphics[width=\textwidth]{figures/pointcloud/airplane/compare-3.png}\\
+\vspace{0.2em}
+(c) 视角三（侧视图）
+\end{minipage}
+
+\caption{飞机补全效果对比}
 \label{fig:airplane_compare}
 \end{figure}
 \FloatBarrier
 
-从图\ref{fig:airplane_compare}可以看出，在正视图视角下，PoinTr基线方法虽然能够重建出飞机的基本轮廓，但机身下方区域存在明显离群点，导致整体形状不清晰。相比之下，本算法优化后的补全结果在机身下方区域的点分布更加均匀，离群点较少，轮廓清晰，机翼与机身的过渡更加自然。
-\FloatBarrier
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth]{figures/pointcloud/airplane/compare-2.png}
-\caption{飞机补全效果对比（视角二）}
-\label{fig:airplane_compare2}
-\end{figure}
-\FloatBarrier
+从图\ref{fig:airplane_compare}(a)可以看出，在正视图视角下，PoinTr基线方法虽然能够重建出飞机的基本轮廓，但机身下方区域存在明显离群点，导致整体形状不清晰。相比之下，本算法优化后的补全结果在机身下方区域的点分布更加均匀，离群点较少，轮廓清晰，机翼与机身的过渡更加自然。
 
-图\ref{fig:airplane_compare2}从底部仰视视角展示了补全效果。在此视角下，PoinTr基线方法生成的点云在尾翼区域存在明显的原始点云缺失区域补全后局部密度不均的问题。本算法的补全结果则呈现出更加均匀的点分布，全局点密度保持一致，整体几何结构更加完整。
-\FloatBarrier
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth]{figures/pointcloud/airplane/compare-3.png}
-\caption{飞机补全效果对比（视角三）}
-\label{fig:airplane_compare3}
-\end{figure}
-\FloatBarrier
+图\ref{fig:airplane_compare}(b)从底部仰视视角展示了补全效果。在此视角下，PoinTr基线方法生成的点云在尾翼区域存在明显的原始点云缺失区域补全后局部密度不均的问题。本算法的补全结果则呈现出更加均匀的点分布，全局点密度保持一致，整体几何结构更加完整。
 
-图\ref{fig:airplane_compare3}从侧面视角展示了补全效果。在此视角下，PoinTr基线方法在机身腹部区域出现了严重的点云离群和密度现象。本算法通过引入DCD损失和排斥损失，有效抑制了局部点云堆积，使得机身腹部的点分布更加贴合真实表面，整体轮廓清晰，线条流畅，无明显密度不均问题。
+图\ref{fig:airplane_compare}(c)从侧面视角展示了补全效果。在此视角下，PoinTr基线方法在机身腹部区域出现了严重的点云离群和密度现象。本算法通过引入DCD损失和排斥损失，有效抑制了局部点云堆积，使得机身腹部的点分布更加贴合真实表面，整体轮廓清晰，线条流畅，无明显密度不均问题。
 \FloatBarrier
 \begin{figure}[htbp]
 \centering
@@ -162,23 +173,32 @@ PCD-MT\cite{li2026ppcmt} & 0.40 & 0.53 & 0.99 & 0.64 & 48.9 \\
 \FloatBarrier
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=\textwidth]{figures/pointcloud/guitar/compare-1.png}
-\caption{吉他补全效果对比（视角一）}
+% 视角一
+\begin{minipage}{\textwidth}
+\centering
+\includegraphics[width=\textwidth]{figures/pointcloud/guitar/compare-1.png}\\
+\vspace{0.2em}
+(a) 视角一（正视图）
+\end{minipage}
+
+\vspace{1.5em} % 增加此处垂直间距
+
+% 视角二
+\begin{minipage}{\textwidth}
+\centering
+\includegraphics[width=\textwidth]{figures/pointcloud/guitar/compare-2.png}\\
+\vspace{0.2em}
+(b) 视角二（侧视图）
+\end{minipage}
+
+\caption{吉他补全效果对比}
 \label{fig:guitar_compare}
 \end{figure}
 \FloatBarrier
 
-从图\ref{fig:guitar_compare}可以看出，在正面视角下，PoinTr基线方法虽然能够重建出吉他的基本形状，但琴身区域的点分布存在明显的不均匀现象，琴身两侧的弧形边缘处点云密度偏高，而琴身中部则相对稀疏。本算法的补全结果在琴身各区域的点密度更加均衡，琴身的弧形轮廓更加清晰，琴颈与琴身的连接处过渡更加自然。
-\FloatBarrier
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=\textwidth]{figures/pointcloud/guitar/compare-2.png}
-\caption{吉他补全效果对比（视角二）}
-\label{fig:guitar_compare2}
-\end{figure}
-\FloatBarrier
+从图\ref{fig:guitar_compare}(a)可以看出，在正面视角下，PoinTr基线方法虽然能够重建出吉他的基本形状，但琴身区域的点分布存在明显的不均匀现象，琴身两侧的弧形边缘处点云密度偏高，而琴身中部则相对稀疏。本算法的补全结果在琴身各区域的点密度更加均衡，琴身的弧形轮廓更加清晰，琴颈与琴身的连接处过渡更加自然。
 
-图\ref{fig:guitar_compare2}从侧面视角展示了吉他琴颈的补全细节与整体轮廓。在此视角下，两个补全后的结果都没有出现明显离群点。但PoinTr基线方法生成的点云存在明显的厚度不均问题，部分区域点云过度集中导致琴颈显得过厚，而琴身与琴颈连接处过度处十分不自然，琴身也存在明显厚度不均。本算法的补全结果则呈现出均匀的琴颈厚度，轮廓清晰合理，点分布沿琴颈轴向保持一致，琴颈的几何结构更加精确。
+图\ref{fig:guitar_compare}(b)从侧面视角展示了吉他琴颈的补全细节与整体轮廓。在此视角下，两个补全后的结果都没有出现明显离群点。但PoinTr基线方法生成的点云存在明显的厚度不均问题，部分区域点云过度集中导致琴颈显得过厚，而琴身与琴颈连接处过度处十分不自然，琴身也存在明显厚度不均。本算法的补全结果则呈现出均匀的琴颈厚度，轮廓清晰合理，点分布沿琴颈轴向保持一致，琴颈的几何结构更加精确。
 \FloatBarrier
 \begin{figure}[htbp]
 \centering
@@ -188,7 +208,7 @@ PCD-MT\cite{li2026ppcmt} & 0.40 & 0.53 & 0.99 & 0.64 & 48.9 \\
 \end{figure}
 \FloatBarrier
 
-图\ref{fig:guitar_density}聚焦于吉他琴身残缺区域的补全细节。从图中可以清晰地观察到，PoinTr基线方法在琴身补全区域出现了点云密度波动现象，琴颈表面的点分布不够连续。本算法的补全结果则展现出均匀且连续的点分布，补全区域的点密度与琴身区域保持一致，琴颈表面的几何细节得到了精确还原。
+图\ref{fig:guitar_density}展示了吉他琴身残缺区域的补全细节。从图中可以清晰地观察到，PoinTr基线方法在琴身补全区域出现了点云密度波动现象，琴颈表面的点分布不够连续。本算法的补全结果则展现出均匀且连续的点分布，补全区域的点密度与琴身区域保持一致，琴颈表面的几何细节得到了精确还原。
 
 (3) 可视化对比总结
 

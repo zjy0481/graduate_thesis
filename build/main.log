@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.4.22)  20 MAY 2026 20:43
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.4.22)  21 MAY 2026 00:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1580,6 +1580,11 @@ LaTeX Warning: Reference `cha:reconstruct' on page 22 undefined on input line 11
 
  (./contents/chap03.tex
 第三章
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 126.
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 126.
+
 [24
 
 
@@ -1640,42 +1645,43 @@ File: figures/pointcloud/airplane/compare-1.png Graphic file (type bmp)
 <figures/pointcloud/airplane/compare-1.png>
 File: figures/pointcloud/airplane/compare-2.png Graphic file (type bmp)
 <figures/pointcloud/airplane/compare-2.png>
- [49]
 File: figures/pointcloud/airplane/compare-3.png Graphic file (type bmp)
 <figures/pointcloud/airplane/compare-3.png>
+ [49] [50]
 File: figures/pointcloud/airplane/density.png Graphic file (type bmp)
 <figures/pointcloud/airplane/density.png>
- [50]
 File: figures/pointcloud/guitar/scan.png Graphic file (type bmp)
 <figures/pointcloud/guitar/scan.png>
+ [51]
 File: figures/pointcloud/guitar/compare-1.png Graphic file (type bmp)
 <figures/pointcloud/guitar/compare-1.png>
- [51]
 File: figures/pointcloud/guitar/compare-2.png Graphic file (type bmp)
 <figures/pointcloud/guitar/compare-2.png>
+ [52] [53]
 File: figures/pointcloud/guitar/density.png Graphic file (type bmp)
 <figures/pointcloud/guitar/density.png>
- [52] [53] [54] [55]
-Overfull \hbox (15.10327pt too wide) in paragraph at lines 280--292
+ [54
+
+] [55] [56]
+Overfull \hbox (15.10327pt too wide) in paragraph at lines 300--312
  [][] 
  []
 
-
-Overfull \hbox (7.4046pt too wide) in paragraph at lines 303--317
+[57]
+Overfull \hbox (7.4046pt too wide) in paragraph at lines 323--337
  [][] 
  []
 
-[56]
+[58]
 File: figures/reconstruct/airplane/baseline-front.png Graphic file (type bmp)
 <figures/reconstruct/airplane/baseline-front.png>
 File: figures/reconstruct/airplane/optimized-front.png Graphic file (type bmp)
 <figures/reconstruct/airplane/optimized-front.png>
- [57]
 File: figures/reconstruct/airplane/baseline-back.png Graphic file (type bmp)
 <figures/reconstruct/airplane/baseline-back.png>
 File: figures/reconstruct/airplane/optimized-back.png Graphic file (type bmp)
 <figures/reconstruct/airplane/optimized-back.png>
- [58]
+ [59]
 File: figures/reconstruct/guitar/baseline-front.png Graphic file (type bmp)
 <figures/reconstruct/guitar/baseline-front.png>
 File: figures/reconstruct/guitar/optimized-front.png Graphic file (type bmp)
@@ -1684,22 +1690,22 @@ File: figures/reconstruct/guitar/baseline-back.png Graphic file (type bmp)
 <figures/reconstruct/guitar/baseline-back.png>
 File: figures/reconstruct/guitar/optimized-back.png Graphic file (type bmp)
 <figures/reconstruct/guitar/optimized-back.png>
- [59] [60]) [61]
+ [60] [61]) [62]
 \openout2 = `contents/chap05.aux'.
 
  (./contents/chap05.tex
 第五章
-[62
+[63
 
 
 
 
-]) [63] (build/main.bbl [64
+]) [64] (build/main.bbl [65
 
 
 
 
-] [65]) [66]
+] [66]) [67]
 \openout2 = `contents/acknowledgement.aux'.
 
  (./contents/acknowledgement.tex
@@ -1708,7 +1714,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 12.045pt
 (hyperref)                replaced by space on input line 3.
 
-) [67
+) [68
 
 
 
@@ -1726,7 +1732,7 @@ File: figures/back-cover.pdf Graphic file (type pdf)
 <use figures/back-cover.pdf, page 1>
 File: figures/back-cover.pdf Graphic file (type pdf)
 <use figures/back-cover.pdf, page 1>
- [68
+ [69
 
 
 
@@ -1748,15 +1754,15 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E6FD362224FFA6CD9185CBA4B86A7A0E;9042.
+(rerunfilecheck)             Checksum: 9EA4AB4E4A6FC107E547A47C440E9D3E;9042.
  ) 
 Here is how much of TeX's memory you used:
- 36145 strings out of 470139
- 778060 string characters out of 5477717
- 1173052 words of memory out of 5000000
- 63962 multiletter control sequences out of 15000+600000
- 657705 words of font info for 207 fonts, out of 8000000 for 9000
+ 36193 strings out of 470139
+ 779431 string characters out of 5477717
+ 1173441 words of memory out of 5000000
+ 64002 multiletter control sequences out of 15000+600000
+ 665170 words of font info for 242 fonts, out of 8000000 for 9000
  37 hyphenation exceptions out of 8191
  107i,20n,125p,1443b,936s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on build/main.pdf (75 pages).
+Output written on build/main.pdf (76 pages).

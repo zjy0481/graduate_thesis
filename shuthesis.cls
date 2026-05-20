@@ -254,9 +254,9 @@
 \renewcommand{\floatpagefraction}{0.60}
 \let\old@tabular\@tabular
 \def\shu@tabular{\xiaosi[1.5]\old@tabular}
-\DeclareCaptionLabelFormat{shu}{{\xiaosi[1.5]\heiti #1~\rmfamily\bfseries#2 }}
+\DeclareCaptionLabelFormat{shu}{{\wuhao[1.5]\heiti #1~\rmfamily\bfseries#2 }}
 \DeclareCaptionLabelSeparator{shu}{\hspace{1em}}
-\DeclareCaptionFont{shu}{\xiaosi[1.5]\heiti}
+\DeclareCaptionFont{shu}{\wuhao[1.5]\heiti}
 \captionsetup{labelformat=shu,labelsep=shu,font=shu}
 \captionsetup[table]{position=top,belowskip={12bp-\intextsep},aboveskip=6bp}
 \captionsetup[figure]{position=bottom,belowskip={12bp-\intextsep},aboveskip=6bp}
