@@ -106,6 +106,12 @@ PCD-MT\cite{li2026ppcmt} & 0.40 & 0.53 & 0.99 & 0.64 & 48.9 \\
 \FloatBarrier
 
 图\ref{fig:airplane_compare}展示了飞机样本由本算法与baseline方法的补全前后对比。每行中，左侧为输入的残缺点云（红色点云，2048个点），中间为PoinTr基线方法的补全结果（绿色点云，8192个点），右侧为本算法优化后的补全结果（蓝色点云，8192个点），三个点云姿态完全相同。
+
+从图\ref{fig:airplane_compare}(a)可以看出，在正视图视角下，PoinTr基线方法虽然能够重建出飞机的基本轮廓，但机身下方区域存在明显离群点，导致整体形状不清晰。相比之下，本算法优化后的补全结果在机身下方区域的点分布更加均匀，离群点较少，轮廓清晰，机翼与机身的过渡更加自然。
+
+图\ref{fig:airplane_compare}(b)从底部仰视视角展示了补全效果。在此视角下，PoinTr基线方法生成的点云在尾翼区域存在明显的原始点云缺失区域补全后局部密度不均的问题。本算法的补全结果则呈现出更加均匀的点分布，全局点密度保持一致，整体几何结构更加完整。
+
+图\ref{fig:airplane_compare}(c)从侧面视角展示了补全效果。在此视角下，PoinTr基线方法在机身腹部区域出现了严重的点云离群和密度现象。本算法通过引入DCD损失和排斥损失，有效抑制了局部点云堆积，使得机身腹部的点分布更加贴合真实表面，整体轮廓清晰，线条流畅，无明显密度不均问题。
 \FloatBarrier
 \begin{figure}[htbp]
 \centering
@@ -142,11 +148,6 @@ PCD-MT\cite{li2026ppcmt} & 0.40 & 0.53 & 0.99 & 0.64 & 48.9 \\
 \end{figure}
 \FloatBarrier
 
-从图\ref{fig:airplane_compare}(a)可以看出，在正视图视角下，PoinTr基线方法虽然能够重建出飞机的基本轮廓，但机身下方区域存在明显离群点，导致整体形状不清晰。相比之下，本算法优化后的补全结果在机身下方区域的点分布更加均匀，离群点较少，轮廓清晰，机翼与机身的过渡更加自然。
-
-图\ref{fig:airplane_compare}(b)从底部仰视视角展示了补全效果。在此视角下，PoinTr基线方法生成的点云在尾翼区域存在明显的原始点云缺失区域补全后局部密度不均的问题。本算法的补全结果则呈现出更加均匀的点分布，全局点密度保持一致，整体几何结构更加完整。
-
-图\ref{fig:airplane_compare}(c)从侧面视角展示了补全效果。在此视角下，PoinTr基线方法在机身腹部区域出现了严重的点云离群和密度现象。本算法通过引入DCD损失和排斥损失，有效抑制了局部点云堆积，使得机身腹部的点分布更加贴合真实表面，整体轮廓清晰，线条流畅，无明显密度不均问题。
 \FloatBarrier
 \begin{figure}[htbp]
 \centering
@@ -176,7 +177,7 @@ PCD-MT\cite{li2026ppcmt} & 0.40 & 0.53 & 0.99 & 0.64 & 48.9 \\
 % 视角一
 \begin{minipage}{\textwidth}
 \centering
-\includegraphics[width=\textwidth]{figures/pointcloud/guitar/compare-1.png}\\
+\includegraphics[width=0.9\textwidth]{figures/pointcloud/guitar/compare-1.png}\\
 \vspace{0.2em}
 (a) 视角一（正视图）
 \end{minipage}
@@ -186,7 +187,7 @@ PCD-MT\cite{li2026ppcmt} & 0.40 & 0.53 & 0.99 & 0.64 & 48.9 \\
 % 视角二
 \begin{minipage}{\textwidth}
 \centering
-\includegraphics[width=\textwidth]{figures/pointcloud/guitar/compare-2.png}\\
+\includegraphics[width=0.9\textwidth]{figures/pointcloud/guitar/compare-2.png}\\
 \vspace{0.2em}
 (b) 视角二（侧视图）
 \end{minipage}
@@ -195,7 +196,6 @@ PCD-MT\cite{li2026ppcmt} & 0.40 & 0.53 & 0.99 & 0.64 & 48.9 \\
 \label{fig:guitar_compare}
 \end{figure}
 \FloatBarrier
-
 从图\ref{fig:guitar_compare}(a)可以看出，在正面视角下，PoinTr基线方法虽然能够重建出吉他的基本形状，但琴身区域的点分布存在明显的不均匀现象，琴身两侧的弧形边缘处点云密度偏高，而琴身中部则相对稀疏。本算法的补全结果在琴身各区域的点密度更加均衡，琴身的弧形轮廓更加清晰，琴颈与琴身的连接处过渡更加自然。
 
 图\ref{fig:guitar_compare}(b)从侧面视角展示了吉他琴颈的补全细节与整体轮廓。在此视角下，两个补全后的结果都没有出现明显离群点。但PoinTr基线方法生成的点云存在明显的厚度不均问题，部分区域点云过度集中导致琴颈显得过厚，而琴身与琴颈连接处过度处十分不自然，琴身也存在明显厚度不均。本算法的补全结果则呈现出均匀的琴颈厚度，轮廓清晰合理，点分布沿琴颈轴向保持一致，琴颈的几何结构更加精确。
@@ -378,9 +378,9 @@ PoinTr基线 & 0.76 & 1.05 & 1.88 & 1.23 & 42.1 \\
 \FloatBarrier
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.45\textwidth]{figures/reconstruct/guitar/baseline-front.png}
+\includegraphics[width=0.4\textwidth]{figures/reconstruct/guitar/baseline-front.png}
 \hfill
-\includegraphics[width=0.45\textwidth]{figures/reconstruct/guitar/optimized-front.png}
+\includegraphics[width=0.4\textwidth]{figures/reconstruct/guitar/optimized-front.png}
 \caption{吉他网格重建结果正面视图对比（左：PoinTr基线，右：本算法优化）}
 \label{fig:reconstruct_guitar_front}
 \end{figure}
@@ -389,9 +389,9 @@ PoinTr基线 & 0.76 & 1.05 & 1.88 & 1.23 & 42.1 \\
 \FloatBarrier
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.45\textwidth]{figures/reconstruct/guitar/baseline-back.png}
+\includegraphics[width=0.4\textwidth]{figures/reconstruct/guitar/baseline-back.png}
 \hfill
-\includegraphics[width=0.45\textwidth]{figures/reconstruct/guitar/optimized-back.png}
+\includegraphics[width=0.4\textwidth]{figures/reconstruct/guitar/optimized-back.png}
 \caption{吉他网格重建结果背面视图对比（左：PoinTr基线，右：本算法优化）}
 \label{fig:reconstruct_guitar_back}
 \end{figure}
@@ -405,11 +405,11 @@ PoinTr基线 & 0.76 & 1.05 & 1.88 & 1.23 & 42.1 \\
 
 综合上述重建结果对比，本算法优化后的补全点云为三维表面重建带来了以下积极影响：
 
-1. 轮廓清晰度提升。本算法通过自适应查询生成机制和混合损失函数优化，使得补全点云在物体边缘和结构转折处的轮廓更加清晰。清晰的点云轮廓为法线估计提供了更加准确的局部几何信息，进而提升了泊松重建的表面质量。
+\ding{172} 轮廓清晰度提升。本算法通过自适应查询生成机制和混合损失函数优化，使得补全点云在物体边缘和结构转折处的轮廓更加清晰。清晰的点云轮廓为法线估计提供了更加准确的局部几何信息，进而提升了泊松重建的表面质量。
 
-2. 点云分布均匀性改善。本算法引入的损失函数优化有效抑制了补全区域的局部点云堆积和空洞现象，使得生成点云在全局范围内保持均匀的密度分布。均匀的点分布为泊松重建提供了更加可靠的输入数据，减少了重建过程中因点密度波动导致的表面粗糙和局部变形。
+\ding{173} 点云分布均匀性改善。本算法引入的损失函数优化有效抑制了补全区域的局部点云堆积和空洞现象，使得生成点云在全局范围内保持均匀的密度分布。均匀的点分布为泊松重建提供了更加可靠的输入数据，减少了重建过程中因点密度波动导致的表面粗糙和局部变形。
 
-3. 整体精度提升。本算法优化后的补全点云在整体形状还原和局部细节精确性上均优于基线方法，使得重建网格模型在几何精度和表面质量上均得到了显著提升。这一改善在飞机机身腹部、吉他琴身弧形边缘等复杂几何区域尤为明显。
+\ding{174} 整体精度提升。本算法优化后的补全点云在整体形状还原和局部细节精确性上均优于基线方法，使得重建网格模型在几何精度和表面质量上均得到了显著提升。这一改善在飞机机身腹部、吉他琴身弧形边缘等复杂几何区域尤为明显。
 
 上述结果表明，点云补全算法的优化不仅体现在补全点云本身的定量指标提升上，更能够直接转化为下游三维表面重建任务的质量改善。本算法通过系统性的损失函数优化和查询生成机制改进，有效解决了补全区域点云密度失衡的核心问题，为三维视觉领域的实际应用提供了更加可靠的技术支撑。
 

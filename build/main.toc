@@ -46,14 +46,14 @@
 \contentsline {section}{\numberline {4.2}点云补全算法对比实验}{47}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}与主流算法性能对比}{47}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}补全效果可视化对比}{48}{subsection.4.2.2}%
-\contentsline {section}{\numberline {4.3}点云补全算法消融实验}{55}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}粗粒度损失函数优化引入的影响}{55}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}自适应查询生成机制影响分析}{56}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}细粒度损失函数优化引入的影响}{57}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}三维表面重建算法结果展示与分析}{58}{section.4.4}%
-\contentsline {section}{\numberline {4.5}本章小结}{62}{section.4.5}%
-\contentsline {chapter}{\numberline {第五章}总结与展望}{63}{chapter.5}%
-\contentsline {section}{\numberline {5.1}研究工作总结}{63}{section.5.1}%
-\contentsline {section}{\numberline {5.2}未来研究展望}{64}{section.5.2}%
-\contentsline {chapter}{参考文献}{65}{section*.23}%
-\contentsline {chapter}{致\hskip 1em\relax 谢}{68}{section*.25}%
+\contentsline {section}{\numberline {4.3}点云补全算法消融实验}{53}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}粗粒度损失函数优化引入的影响}{54}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}自适应查询生成机制影响分析}{55}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}细粒度损失函数优化引入的影响}{56}{subsection.4.3.3}%
+\contentsline {section}{\numberline {4.4}三维表面重建算法结果展示与分析}{57}{section.4.4}%
+\contentsline {section}{\numberline {4.5}本章小结}{61}{section.4.5}%
+\contentsline {chapter}{\numberline {第五章}总结与展望}{62}{chapter.5}%
+\contentsline {section}{\numberline {5.1}研究工作总结}{62}{section.5.1}%
+\contentsline {section}{\numberline {5.2}未来研究展望}{63}{section.5.2}%
+\contentsline {chapter}{参考文献}{64}{section*.23}%
+\contentsline {chapter}{致\hskip 1em\relax 谢}{67}{section*.25}%
